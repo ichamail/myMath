@@ -229,21 +229,21 @@ public:
 
         static_assert(N == 3, "Vector dimension should be equal to 3");
 
-        Vector<T, 3> dotProduct {};
+        Vector<T, 3> crossProduct {};
 
-        dotProduct.component[x] = (
+        crossProduct.component[x] = (
             component[y] * rhs.component[z] - component[z] * rhs.component[y]
         );
 
-        dotProduct.component[y] = (
+        crossProduct.component[y] = (
             component[z] * rhs.component[x] - component[x] * rhs.component[z]
         );
 
-        dotProduct.component[z] = (
+        crosstProduct.component[z] = (
             component[x] * rhs.component[y] - component[y] * rhs.component[x]
         );
 
-        return dotProduct;
+        return crossProduct;
 
     }
 
